@@ -7,4 +7,6 @@ hl.config({
 
 -- Сворачивание окна в special:minimized (Super+H — убрать, Super+G — показать/скрыть)
 hl.bind("SUPER + H", hl.dsp.window.move({ workspace = "special:minimized" }))
-hl.bind("SUPER + G", hl.dsp.workspace.toggleSpecial("minimized"))
+hl.bind("SUPER + G", function()
+    os.execute("hyprctl dispatch togglespecialworkspace minimized")
+end)
