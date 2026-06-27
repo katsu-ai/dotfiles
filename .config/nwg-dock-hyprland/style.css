@@ -1,0 +1,77 @@
+/* nwg-dock-hyprland — прозрачный док в стиле Caelestia / Catppuccin Mocha */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
+}
+
+/* Основной контейнер дока */
+#box {
+    background-color: rgba(30, 30, 46, 0.65);   /* Catppuccin base с прозрачностью */
+    border-radius: 16px;
+    border: 1px solid rgba(180, 190, 254, 0.15); /* lavender outline */
+    padding: 6px 10px;
+    margin: 0 4px 4px 4px;
+}
+
+/* Иконки приложений */
+#image {
+    border-radius: 10px;
+    margin: 3px;
+    transition: all 0.2s ease;
+}
+
+/* Активное (открытое) приложение */
+#active {
+    border-radius: 10px;
+    background-color: rgba(203, 166, 247, 0.20); /* mauve highlight */
+    margin: 3px;
+}
+
+/* Индикатор под иконкой (точка) */
+#dot {
+    background-color: rgba(203, 166, 247, 0.85);
+    border-radius: 50%;
+    min-width: 4px;
+    min-height: 4px;
+    margin-bottom: 2px;
+}
+
+/* Кнопки */
+button {
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 4px;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: rgba(203, 166, 247, 0.15);
+    transform: scale(1.08);
+}
+
+button:active {
+    background-color: rgba(203, 166, 247, 0.30);
+    transform: scale(0.96);
+}
+
+/* Разделитель */
+separator {
+    background-color: rgba(180, 190, 254, 0.15);
+    margin: 4px 6px;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+/* Tooltip */
+tooltip {
+    background-color: rgba(30, 30, 46, 0.95);
+    border: 1px solid rgba(180, 190, 254, 0.25);
+    border-radius: 8px;
+    color: #cdd6f4;
+    padding: 4px 8px;
+    font-size: 12px;
+}
