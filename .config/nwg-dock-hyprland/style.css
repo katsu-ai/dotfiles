@@ -1,77 +1,65 @@
-/* nwg-dock-hyprland — прозрачный док в стиле Caelestia / Catppuccin Mocha */
-
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font", sans-serif;
-    font-size: 13px;
+    font-family: sans-serif;
 }
 
-/* Основной контейнер дока */
 #box {
-    background-color: rgba(30, 30, 46, 0.65);   /* Catppuccin base с прозрачностью */
-    border-radius: 16px;
-    border: 1px solid rgba(180, 190, 254, 0.15); /* lavender outline */
-    padding: 6px 10px;
-    margin: 0 4px 4px 4px;
+    background-color: rgba(20, 20, 30, 0.55);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 8px 12px;
+    margin: 0 0 6px 0;
 }
 
-/* Иконки приложений */
-#image {
-    border-radius: 10px;
-    margin: 3px;
-    transition: all 0.2s ease;
-}
-
-/* Активное (открытое) приложение */
-#active {
-    border-radius: 10px;
-    background-color: rgba(203, 166, 247, 0.20); /* mauve highlight */
-    margin: 3px;
-}
-
-/* Индикатор под иконкой (точка) */
-#dot {
-    background-color: rgba(203, 166, 247, 0.85);
-    border-radius: 50%;
-    min-width: 4px;
-    min-height: 4px;
-    margin-bottom: 2px;
-}
-
-/* Кнопки */
 button {
     background: transparent;
-    border: none;
-    border-radius: 10px;
-    padding: 4px;
-    transition: background 0.15s ease, transform 0.1s ease;
+    border-radius: 14px;
+    padding: 5px;
+    margin: 0 3px;
+    transition: all 0.15s ease;
 }
 
 button:hover {
-    background-color: rgba(203, 166, 247, 0.15);
-    transform: scale(1.08);
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-6px) scale(1.12);
 }
 
 button:active {
-    background-color: rgba(203, 166, 247, 0.30);
-    transform: scale(0.96);
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px) scale(1.0);
 }
 
-/* Разделитель */
+#image {
+    border-radius: 12px;
+}
+
+#active {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 5px;
+    margin: 0 3px;
+}
+
+#dot {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    min-width: 4px;
+    min-height: 4px;
+    margin-top: 2px;
+}
+
 separator {
-    background-color: rgba(180, 190, 254, 0.15);
-    margin: 4px 6px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 6px 8px;
     min-width: 1px;
-    min-height: 1px;
 }
 
-/* Tooltip */
 tooltip {
-    background-color: rgba(30, 30, 46, 0.95);
-    border: 1px solid rgba(180, 190, 254, 0.25);
+    background-color: rgba(20, 20, 30, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 8px;
-    color: #cdd6f4;
-    padding: 4px 8px;
+    color: #ffffff;
+    padding: 4px 10px;
     font-size: 12px;
 }
